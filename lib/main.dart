@@ -5,6 +5,8 @@ void main() {
 }
 
 class StockTrackerApp extends StatelessWidget {
+  const StockTrackerApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +21,8 @@ class StockTrackerApp extends StatelessWidget {
 }
 
 class StockTrackerHomePage extends StatefulWidget {
+  const StockTrackerHomePage({super.key});
+
   @override
   _StockTrackerHomePageState createState() => _StockTrackerHomePageState();
 }
@@ -94,10 +98,10 @@ class _StockTrackerHomePageState extends State<StockTrackerHomePage> {
             _isTracking
                 ? ElevatedButton(
                     onPressed: _stopTracking,
-                    child: Text('Takibi Durdur'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
                     ),
+                    child: Text('Takibi Durdur'),
                   )
                 : ElevatedButton(
                     onPressed: () {
